@@ -1,0 +1,7 @@
+Abstract
+
+University employment services require higher levels of digital support for recruitment information publishing, position matching, resume management, and application tracking. Traditional approaches based on offline notices and scattered spreadsheets are inefficient in information delivery, position screening, and process traceability, and they struggle to meet multi‑party collaboration needs. This study focuses on the design and implementation of a campus recruitment system and builds a unified platform for students, companies, and administrators. The system adopts a B/S architecture. The backend is based on Spring Boot 3.2 and Java 17 to implement access control, data access, and business process orchestration. The frontend uses Vue 3 to build the user interface. The data layer uses MySQL for persistence. Core functions include user registration and login, company profile maintenance, position publishing, resume management, application records, interview scheduling, and message notifications, with administrative management and statistics entry points.
+
+Functional testing covers login authentication, position publishing, resume submission, interview management, and message notifications. The results show that the system supports the business loop and traceability requirements of campus recruitment scenarios, with good usability and scalability.
+
+Keywords: campus recruitment; Spring Boot; Vue 3; MySQL; resume management
