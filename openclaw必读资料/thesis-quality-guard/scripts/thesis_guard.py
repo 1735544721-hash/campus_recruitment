@@ -104,17 +104,18 @@ def check_tests(chapter5_path: Path, issues: list[str]):
         issues.append(f"缺少第 5 章文件: {chapter5_path}")
         return
     text = read_text(chapter5_path)
-    table_marks = re.findall(r"表\s*5-\d+", text)
-    for mark in table_marks:
-        idx = text.find(mark)
-        prefix = text[:idx].splitlines()
-        # find last non-empty line before table title
+    lines = text.splitlines()
+    table_titles = [line.strip() for line in lines if re.match(r"^表\s*5-\d+", line.strip())]
+    for title in table_titles:
+        idx = lines.index(title)
+        prefix = lines[:idx]
         last_line = next((line.strip() for line in reversed(prefix) if line.strip()), "")
         if "表" not in last_line:
-            issues.append(f"{mark} 前缺少引出说明段落")
+            issues.append(f"{title} 前缺少引出说明段落")
     # result analysis references
     result_section = extract_section(text, "5.3 测试结果分析")
-    for mark in table_marks:
+    for title in table_titles:
+        mark = re.search(r"表\s*5-\d+", title).group(0)
         if mark not in result_section:
             issues.append(f"结果分析未引用 {mark}")
 
