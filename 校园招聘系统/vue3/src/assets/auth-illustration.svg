@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="400" height="300" fill="none"/>
+  
+  <!-- 校园建筑 -->
+  <rect x="50" y="100" width="120" height="150" rx="5" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="80" y="70" width="60" height="30" fill="#FFFFFF" opacity="0.9"/>
+  <path d="M75 70L145 70L110 40L75 70Z" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- 窗户 -->
+  <rect x="65" y="120" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="95" y="120" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="125" y="120" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="65" y="160" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="95" y="160" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="125" y="160" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="65" y="200" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="95" y="200" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  <rect x="125" y="200" width="20" height="25" rx="2" fill="#E1F5FE"/>
+  
+  <!-- 门 -->
+  <rect x="95" y="220" width="30" height="30" rx="2" fill="#E1F5FE"/>
+  
+  <!-- 企业大楼 -->
+  <rect x="230" y="80" width="100" height="170" rx="5" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- 窗户 -->
+  <rect x="245" y="100" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="275" y="100" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="305" y="100" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="245" y="125" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="275" y="125" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="305" y="125" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="245" y="150" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="275" y="150" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="305" y="150" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="245" y="175" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="275" y="175" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="305" y="175" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="245" y="200" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="275" y="200" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  <rect x="305" y="200" width="20" height="15" rx="2" fill="#E1F5FE"/>
+  
+  <!-- 门 -->
+  <rect x="270" y="220" width="30" height="30" rx="2" fill="#E1F5FE"/>
+  
+  <!-- 连接线 -->
+  <path d="M170 150C170 150 200 130 230 150" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="5 5"/>
+  
+  <!-- 人物1（学生） -->
+  <circle cx="190" y="180" r="15" fill="#FFFFFF"/>
+  <path d="M180 200C180 200 190 220 200 200" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="190" y1="195" x2="190" y2="215" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="190" y1="215" x2="180" y2="230" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="190" y1="215" x2="200" y2="230" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="180" y1="205" x2="200" y2="205" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- 人物2（招聘者） -->
+  <circle cx="220" y="180" r="15" fill="#FFFFFF"/>
+  <path d="M210 200C210 200 220 220 230 200" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="220" y1="195" x2="220" y2="215" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="220" y1="215" x2="210" y2="230" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="220" y1="215" x2="230" y2="230" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="210" y1="205" x2="230" y2="205" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- 握手 -->
+  <path d="M200 205C200 205 210 210 220 205" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- 文档/简历 -->
+  <rect x="195" y="225" width="20" height="25" rx="2" fill="#FFFFFF" opacity="0.9"/>
+  <line x1="200" y1="230" x2="210" y2="230" stroke="#E1F5FE" stroke-width="1"/>
+  <line x1="200" y1="235" x2="210" y2="235" stroke="#E1F5FE" stroke-width="1"/>
+  <line x1="200" y1="240" x2="210" y2="240" stroke="#E1F5FE" stroke-width="1"/>
+  <line x1="200" y1="245" x2="205" y2="245" stroke="#E1F5FE" stroke-width="1"/>
+</svg>

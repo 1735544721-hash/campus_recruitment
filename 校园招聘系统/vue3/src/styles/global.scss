@@ -1,0 +1,14 @@
+@import './fonts.scss';
+
+:root {
+  --font-family-base: 'SourceHanSerif', serif;
+}
+
+html, body {
+  font-family: var(--font-family-base);
+}
+
+// Element Plus 组件字体覆盖
+:root {
+  --el-font-family: var(--font-family-base);
+} 

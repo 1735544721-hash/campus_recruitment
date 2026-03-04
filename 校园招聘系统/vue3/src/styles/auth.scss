@@ -1,0 +1,303 @@
+// 侘寂主题变量
+$wabi-sabi: (
+  primary: #E8E6E1,    // 米白色
+  secondary: #9B8E83,  // 大地色
+  text: #4A4A4A,      // 深灰文字
+  border: #D3D3D3,    // 细灰线条
+  accent: #8B7355,    // 深褐色强调
+);
+
+// 纸张纹理背景 - 使用 CSS 渐变模拟宣纸效果
+@mixin paper-texture {
+  background: 
+    linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px) 0 0 / 20px 20px,
+    linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px) 0 0 / 20px 20px,
+    map-get($wabi-sabi, primary);
+}
+
+// 墨晕扩散动画
+@keyframes ink-spread {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  background: #F9F6F2;
+  
+  .auth-brand {
+    flex: 1;
+    display: flex;
+  align-items: center;
+    justify-content: center;
+    @include paper-texture;
+    
+    .brand-content {
+      text-align: center;
+      padding: 2rem;
+
+.logo {
+        font-family: var(--font-family-base);
+        font-size: 4rem;
+        color: map-get($wabi-sabi, accent);
+        margin-bottom: 1rem;
+        position: relative;
+        
+  span {
+          font-family: var(--font-family-base);
+        }
+
+        &::after {
+    content: '';
+    position: absolute;
+          top: 50%;
+    left: 50%;
+          width: 100px;
+          height: 100px;
+          transform: translate(-50%, -50%);
+          border: 1px solid rgba(map-get($wabi-sabi, accent), 0.1);
+          border-radius: 50%;
+          animation: ink-spread 3s ease-out infinite;
+  }
+}
+
+      .brand-title {
+        font-family: var(--font-family-base);
+        font-size: 2rem;
+        color: map-get($wabi-sabi, text);
+        font-weight: 300;
+        margin-bottom: 2rem;
+}
+
+.brand-slogan {
+        font-size: 1rem;
+        color: map-get($wabi-sabi, secondary);
+        margin-top: 2rem;
+        font-weight: 300;
+        font-family: var(--font-family-base);
+      }
+    }
+  }
+  
+.auth-form-container {
+    width: 30%;
+    min-width: 400px;
+  display: flex;
+    align-items: center;
+  justify-content: center;
+    background: white;
+
+.auth-box {
+      width: 80%;
+      max-width: 400px;
+
+.auth-tabs {
+  display: flex;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid map-get($wabi-sabi, border);
+  
+  .tab-item {
+          padding: 1rem 2rem;
+          color: map-get($wabi-sabi, secondary);
+    cursor: pointer;
+    position: relative;
+          transition: color 0.3s ease;
+          font-family: var(--font-family-base);
+    
+    &.active {
+            color: map-get($wabi-sabi, text);
+      
+            &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+              background: map-get($wabi-sabi, accent);
+      }
+    }
+  }
+}
+  
+  .welcome-title {
+        font-family: var(--font-family-base);
+        font-size: 1.5rem;
+        color: map-get($wabi-sabi, text);
+        margin-bottom: 0.5rem;
+  }
+  
+  .welcome-subtitle {
+        color: map-get($wabi-sabi, secondary);
+        margin-bottom: 2rem;
+        font-family: var(--font-family-base);
+      }
+      
+      .auth-form {
+        .el-input {
+          --el-input-border-color: map-get($wabi-sabi, border);
+          --el-input-hover-border-color: map-get($wabi-sabi, secondary);
+          --el-input-focus-border-color: map-get($wabi-sabi, accent);
+          
+          .el-input__wrapper {
+            background: transparent;
+            box-shadow: none;
+            border: 1px solid map-get($wabi-sabi, border);
+            transition: all 0.3s ease;
+            
+            &:hover {
+              border-color: map-get($wabi-sabi, secondary);
+            }
+            
+            &.is-focus {
+              border-color: map-get($wabi-sabi, accent);
+              box-shadow: none;
+            }
+          }
+
+          input {
+            font-family: var(--font-family-base);
+          }
+        }
+        
+        .el-button {
+          width: 100%;
+          background: map-get($wabi-sabi, accent);
+          border: none;
+          height: 40px;
+          transition: all 0.3s ease;
+          font-family: var(--font-family-base);
+          
+          &:hover {
+            background: darken(map-get($wabi-sabi, accent), 10%);
+          }
+  }
+}
+
+.user-type-selector {
+        margin-bottom: 2rem;
+  
+  .type-label {
+          color: map-get($wabi-sabi, text);
+          margin-bottom: 0.5rem;
+          font-family: var(--font-family-base);
+  }
+  
+  .type-options {
+    display: flex;
+          gap: 1rem;
+    
+    .type-option {
+      flex: 1;
+            padding: 0.5rem;
+      text-align: center;
+            border: 1px solid map-get($wabi-sabi, border);
+            color: map-get($wabi-sabi, secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+            font-family: var(--font-family-base);
+      
+      &:hover {
+              border-color: map-get($wabi-sabi, secondary);
+      }
+      
+      &.active {
+              background: rgba(map-get($wabi-sabi, accent), 0.1);
+              border-color: map-get($wabi-sabi, accent);
+              color: map-get($wabi-sabi, accent);
+            }
+          }
+  }
+}
+
+.auth-links {
+  text-align: center;
+        margin-top: 1rem;
+  
+  a {
+          color: map-get($wabi-sabi, accent);
+    text-decoration: none;
+          font-family: var(--font-family-base);
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social-login {
+        margin-top: 2rem;
+  
+  .divider {
+    display: flex;
+    align-items: center;
+          margin: 1rem 0;
+    
+          &::before,
+          &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+            background: map-get($wabi-sabi, border);
+    }
+    
+    .divider-text {
+            padding: 0 1rem;
+            color: map-get($wabi-sabi, secondary);
+            font-family: var(--font-family-base);
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+          gap: 2rem;
+    
+    .social-icon {
+            width: 40px;
+            height: 40px;
+            border: 1px solid map-get($wabi-sabi, border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      &:hover {
+              border-color: map-get($wabi-sabi, accent);
+              color: map-get($wabi-sabi, accent);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .auth-container {
+    flex-direction: column;
+  
+  .auth-brand {
+      display: none;
+  }
+  
+  .auth-form-container {
+    width: 100%;
+      min-width: auto;
+      padding: 2rem;
+  }
+  }
+}
